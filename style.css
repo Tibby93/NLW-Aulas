@@ -1,0 +1,171 @@
+* {
+  /*seletor universa. todos os elementos não terão 
+  mar/pedd*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*variaveis*/
+  --text-color: white;
+  --bg-url: url("./assets/bg-mobile.jpg");
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url("./assets/MoonStars.svg");
+}
+
+.light {
+  /*pag adc outra cor*/
+  --text-color: black;
+  --bg-url: url("./assets/bg-mobile-light.jpg");
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --surface-color-hover: rgba(0, 0, 0, 0.01);
+  --switch-bg-url: url("./assets/Sun.svg");
+}
+
+body {
+  /* cover vai preencher todo espaço na tela de fundo*/
+  background: var(--bg-url) no-repeat top center/cover;
+  /*na aula ele não coloca "" ./assets, sistema deve ser diferente, então olhei outro projeto para comparar onde estava errando*/
+}
+
+body * {
+  font-family: "inter", sans-serif;
+  color: var(--text-color);
+  /*nao foi adc ainda estilo de letra */
+}
+
+#container {
+  width: 360px;
+  /*border: 1px solid #eae; borda da caixa para entender o espaço*/
+  margin: auto;
+  padding-top: 56px auto 0px; /* padding/margin-top auto 0px ele aplica encimaa e embaixo e nas laterais.amobos serve para esta função*/
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  /*essa opção centraliza a img*/
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  /* margin: auto;
+   display: block;
+   essa opçaõ tambem centraliza a img*/
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto; /*centraliza*/
+}
+
+/*switch*/
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  top: 50%;
+  position: absolute;/*ele faz uamsobreposiçao*/
+  left: 0;
+  z-index: 1; /*ele tbm muda os andares*/
+  transform: translateY(-50%); /*Y para cima e para baixo VERTICAL*/
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*links*/
+ul {
+  list-style: none;
+  /*tirou os pontos*/
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  /*border: 1px solid #eaa;*/
+  /*cria a caixa */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 16px 24px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  /* rgba(red, green, blue, alpha);*/
+  border-radius: 8px; /* px ou % tambem servem para fazer bordas*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /*ofuscar*/
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+  /*tempo de animação*/
+}
+
+/* pseudo-selector*/
+ul li a:hover {
+  background-color: var(--surface-color-hover);
+  /*estilo de transition na caixa mudando de tom oa passar mouse encima das caixas*/
+  border: 1.5px solid var(--text-color);
+}
+/*social links*/
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: backgroud 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background-color: var(--highlight-color);
+  /*fundo da bolinha tranparente*/
+}
+footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+}

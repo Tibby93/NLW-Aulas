@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <!--comentario/explicção-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-AU-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport= content= site se ajusta para tamanhos de telas-->
+    <title>Develinks</title>
+    <!--primeiro titulo da barra fixa da pag-->
+    <link rel="stylesheet" href="./style.css" />
+    <!--./style.css ou style.css-->
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          src="./assets/avatar.png"
+          alt="Foto de Mayk sorrindo,usando oculos e camisa preta,barba e fundo roxo e azul claro"
+        />
+        <!--alt= serve para descrever a imagem caso ela nao abra no site-->
+        <p>@maykbrito</p>
+      </div>
+
+      <div id="switch" onclick="toggleMode()" >
+        <button></button>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <a href="#">Inscrever-se no NLW</a>
+        </li>
+        <li>
+          <a href="#">Baixar meu e-book</a>
+        </li>
+        <li>
+          <a href="https://github.com/Tibby93/Pantuffa.git" target="_blank">
+            Ver meu portifólio</a
+          >
+        </li>
+        <li>
+          <a href="http://rocketseat.com.br/explorer" target="_blank">
+            Conheça o Explorer</a
+          >
+          <!--target blank abra outra pag-->
+        </li>
+      </ul>
+      <div id="social-links">
+        <a href="" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a href="" target="_blank">
+          <ion-icon name="logo-facebook"></ion-icon
+        ></a>
+        <a href="" target="_blank"> <ion-icon name="logo-tiktok"></ion-icon></a>
+        <a href="https://github.com/" target="_blank">
+          <ion-icon name="logo-github"></ion-icon
+        ></a>
+        <!--adc icones <ion-icon name="logo-github"></ion-icon>-->
+      </div>
+      <footer>
+        Feito com love pela <a href="http//rocketseat.com">Rocketseat</a>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    >
+      <!-- para adc incones precisa dessas informaçoes que esta disponivel no site-->
+    </script>
+    <script src= "script.js"> </script>
+  </body>
+</html>
