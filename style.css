@@ -46,7 +46,7 @@ body * {
   max-width: 588px;
   /*border: 1px solid #eae; borda da caixa para entender o espaço*/
   margin: auto;
-  padding-top: 56px auto 0px; /* padding/margin-top auto 0px ele aplica encimaa e embaixo e nas laterais.amobos serve para esta função*/
+  padding-top: 56px auto 0px; /* padding/margin-top auto 0px ele aplica encimaa e embaixo e nas laterais, amobos serve para esta função*/
   padding: 0 24px;
 }
 
