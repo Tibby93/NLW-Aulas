@@ -32,6 +32,7 @@ body {
   /* cover vai preencher todo espaço na tela de fundo*/
   background: var(--bg-url) no-repeat top center/cover;
   /*na aula ele não coloca "" ./assets, sistema deve ser diferente, então olhei outro projeto para comparar onde estava errando*/
+  height: 100vh;
 }
 
 body * {
@@ -41,7 +42,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*border: 1px solid #eae; borda da caixa para entender o espaço*/
   margin: auto;
   padding-top: 56px auto 0px; /* padding/margin-top auto 0px ele aplica encimaa e embaixo e nas laterais.amobos serve para esta função*/
@@ -86,12 +88,16 @@ body * {
   left: 0;
   z-index: 1; /*ele tbm muda os andares*/
   transform: translateY(-50%); /*Y para cima e para baixo VERTICAL*/
+
+  animation: sldide-back 0.2s
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards; 
+}
 
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -168,4 +174,32 @@ footer {
   text-align: center;
   padding: 24px;
   font-size: 14px;
+}
+
+/*midia queries*/
+@media (min-width: 700px){ /*ajuste de tamanho de telas*/
+   :root {
+    ----bg-url: url("./assets/bg-desktop.jpg")
+   }
+   .light {
+    --bg-url: url("./assets/bg-desktop.light.jpg")
+   }
+}
+
+/*animação*/
+@keyframes slide-in { /*fazendo o botao deslizar*/
+   from {
+    left: 0;
+   }
+   to {
+    left: 50%;
+   }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%
+  }
+  to {left: 0;
+  }
 }
