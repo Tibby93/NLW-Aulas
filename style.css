@@ -84,19 +84,19 @@ body * {
   border-radius: 50%;
 
   top: 50%;
-  position: absolute;/*ele faz uamsobreposiçao*/
+  position: absolute; /*ele faz uamsobreposiçao*/
   left: 0;
   z-index: 1; /*ele tbm muda os andares*/
   transform: translateY(-50%); /*Y para cima e para baixo VERTICAL*/
 
-  animation: sldide-back 0.2s
+  animation: slide-back 0.2s;
 }
 
 .light #switch button {
-  animation: slide-in 0.4s forwards; 
+  animation: slide-in 0.4s forwards;
 }
 
-#switch button:hover{
+#switch button:hover {
   outline: 8px solid var(--highlight-color);
 }
 
@@ -178,31 +178,35 @@ footer {
 }
 
 /*midia queries*/
-@media (min-width: 700px){ /*ajuste de tamanho de telas*/
-   :root {
-    ----bg-url: url("./assets/bg-desktop.jpg")
-   }
-   .light {
-    --bg-url: url("./assets/bg-desktop-light.jpg")
-   }
-   /* fundo maior para ajuste de tela*/
+@media (min-width: 700px) {
+  /*ajuste de tamanho de telas*/
+  :root {
+    ----bg-url: url("./assets/bg-desktop.jpg");
+  }
+  .light {
+    --bg-url: url("./assets/bg-desktop-light.jpg");
+  }
+  /* fundo maior para ajuste de tela*/
 }
 
 /*animação*/
-@keyframes slide-in { /*deslizamento do botão de ida*/
-   from {
+@keyframes slide-in {
+  /*deslizamento do botão de ida*/
+  from {
     left: 0;
-   }
-   to {
+  }
+  to {
     left: 50%;
-   }
+  }
 }
 
-@keyframes slide-back {/*deslizamento do botão de volta*/
+@keyframes slide-back {
+  /*deslizamento do botão de volta*/
   from {
-    left: 50%
+    left: 50%;
   }
-  to {left: 0;
+  to {
+    left: 0;
   }
 }
 
